@@ -1,0 +1,226 @@
+.main{
+    min-height: 100vh;
+    padding-bottom: 15px;
+    position: relative;
+    flex: 1;
+    background: #131314;
+}
+.main p{
+    color: #ffffec;
+}
+.main .top-main-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 300;
+    padding: 20px;
+}
+
+.main .top-main-menu img{
+    height: 7vh;
+    border-radius: 50%;
+}
+.main-container{
+    max-width: 900px;
+    margin: auto;
+}
+.main-container .hero-text{
+    font-size: 56px;
+    font-weight: 500;
+    padding: 20px;
+    color: #c4c7c5;
+    margin: 20px 0px;
+}
+.hero-text span{
+    background: -webkit-linear-gradient(16deg,#4b90ff,#ff5547);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main .card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+}
+.card-container .card{
+    height: 200px;
+    padding: 15px;
+    background-color: #1e1f20;
+    border-radius: 10px;
+    position: relative; 
+    cursor: pointer;
+}
+.main .card img{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+.main .card p{
+    font-size: 17px;
+}
+.main .card:hover{
+    background: #333537;
+    transition: all;
+    border: 1px solid #4b90ff; 
+}
+.main .main-bottom{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 20px;
+    max-width: 900px;
+    /* margin: 0px 150px; */
+    bottom: 0px;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #1e1f20;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.search img{
+    width: 24px;
+    cursor: pointer;
+}
+.search input{
+    background: transparent;
+    color: #f6f7f8;
+    border: none;
+    font-size: 17px;
+    padding: 18px;
+    outline: none;
+    flex: 1;
+}
+.searchbar-image{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.bottomtext{
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    font-size: 13px;
+    
+}
+.result{
+    max-height: 70vh;
+    overflow-y: scroll;
+    padding: 0px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.result::-webkit-scrollbar{
+    display: none;
+}
+.result .result-title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.result .result-title img{
+    border-radius: 50%;
+    height: 40px;
+}
+.result .result-data{
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+.result .result-data img{
+    height: 40px;
+}
+.loading{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.loading hr{
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff,#ffffff,#9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 3s infinite linear;
+}
+@keyframes loader{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+.result-data p{
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+@media (max-width:600px){
+    .main .top-main-menu img{
+        height: 4vh;
+        border-radius: 50%;
+    }
+    .main{
+        transition: all 0.5s ease-in-out;
+    }
+    .main-container .hero-text{
+        font-size: 36px;
+    }
+    .main .card-container{
+        /* display: none; */
+    }
+    .main{
+        width: 100vw;
+    }
+    .main .card-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(110px,1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+    .card-container .card{
+        height: 100px;
+       
+    }
+    .main .card img{
+        width: 15px;
+        padding: 5px;
+       
+    }
+    .main .card p{
+        font-size:10px;
+    }
+    .main .search{
+        padding: 1px 10px;
+    }
+    .searchbar-image{
+       
+        gap: 9px;
+    }
+    .search img{
+        width: 20px;
+        
+    }
+    .search input{
+       
+        font-size: 13px;
+        padding: 15px;
+       
+        flex: none;
+    }
+}
